@@ -1,0 +1,204 @@
+@use "../base/var" as v;
+.container {
+  width: min(100%, 500px);
+  margin: 0 auto 100px auto;
+  display: grid;
+  grid-column: 1fr;
+  gap: 1rem;
+  padding-inline: 1rem;
+
+  .timeframe-container {
+    height: 12.875rem;
+    margin-top: 5rem;
+    background-color: v.$Dark-blue;
+    border-radius: 1rem;
+    .user {
+      width: 100%;
+      height: 8.375rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem;
+      background-color: v.$Blue;
+      border-radius: 1rem;
+      .user__avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background-color: v.$white;
+        padding: 2px;
+        transition: transform 0.6ms;
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+      .user__name {
+        font-weight: 300;
+        font-size: 0.9em;
+        &__full--name {
+          font-size: 1.5em;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__period {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-weight: 400;
+      color: v.$Desaturated-blue;
+      transition: color .7ms ease;
+
+      & > li:hover {
+        cursor: pointer;
+        color: v.$white;
+      }
+    }
+  }
+  .activity-container {
+    height: 10.0625rem;
+    background-repeat: no-repeat;
+    background-color: red;
+    border-radius: 1rem;
+    padding-top: 2.25rem;
+    transition: scale .1ms ease;
+    &:hover{
+      transform: scale(1.2);
+    }
+
+    .activity {
+      height: 126px;
+      border-radius: 1rem;
+      background-color: v.$Dark-blue;
+      padding: 1.875rem 1.5rem;
+     
+
+     
+      &__category {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1em;
+        font-weight: 500;
+        margin-bottom: 0.875rem;
+      }
+      &__duration {
+        display: flex;
+        justify-content: space-between;
+
+        .hour {
+          font-size: 1.4em;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .activity-container--word {
+    background-color: v.$Light-red-work;
+    background-image: url("../../src/images/icon-work.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+  .activity-container--play {
+    background-color: v.$Soft-blue-play;
+    background-image: url("../../src/images/icon-play.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+  .activity-container--study {
+    background-color: v.$Light-red-study;
+    background-image: url("../../src/images/icon-study.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+  .activity-container--exercise {
+    background-color: v.$Lime-green-exercise;
+    background-image: url("../../src/images/icon-exercise.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+  .activity-container--social {
+    background-color: v.$Violet-social;
+    background-image: url("../../src/images/icon-social.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+  .activity-container--social {
+    background-color: v.$Violet-social;
+    background-image: url("../../src/images/icon-social.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+  .activity-container--self-care {
+    background-color: v.$Soft-orange-self-care;
+    background-image: url("../../src/images/icon-self-care.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 55.875rem;
+    height: 25.9375rem;
+    margin: 193px auto;
+    grid-template-columns: repeat(4, 207px);
+    grid-template-rows: repeat(2, 194px);
+    gap: 1.5rem;
+
+    .timeframe-container {
+      grid-row: 1/4;
+      grid-column: 1/2;
+      margin: 0;
+      height: 415px;
+
+      .user {
+        height: 13.5625rem;
+        display: grid;
+
+        .user__avatar {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          background-color: v.$white;
+          padding: 2px;
+        }
+      }
+
+      &__period {
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: 500;
+        color: v.$Desaturated-blue;
+        gap: 2rem;
+        margin-left: 2rem;
+      }
+    }
+
+    .activity-container {
+      height: 100%;
+
+      .activity {
+        height: 160px;
+
+        &__duration {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 1rem;
+
+          .hour {
+            font-size: 2em;
+            font-weight: 400;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
