@@ -63,10 +63,10 @@
   background-color: red;
   border-radius: 1rem;
   padding-top: 2.25rem;
-  transition: scale 0.1ms ease;
+  transition: all 0.2s ease;
 }
 .container .activity-container:hover {
-  transform: scale(1.2);
+  cursor: pointer;
 }
 .container .activity-container .activity {
   height: 126px;
@@ -81,6 +81,9 @@
   font-size: 1.1em;
   font-weight: 500;
   margin-bottom: 0.875rem;
+}
+.container .activity-container .activity__category > p:nth-child(2):hover {
+  cursor: pointer;
 }
 .container .activity-container .activity__duration {
   display: flex;
