@@ -4,7 +4,7 @@ const allLi = frequiencies.querySelectorAll("li");
 const allFrequiencies = [...allLi];
 const container = document.querySelector(".container");
 const wrap = document.querySelector(".wrap");
-let nId = "daily";
+let nId = "weekly";
 
 setData(nId);
 
@@ -33,7 +33,8 @@ function setData(nId) {
 }
 
 function render(nameClass, title, hour, prev) { // la funcion render recibe los datos por parametros  y los pinta con el template de cada tarjeta
-  const template = `<div class='activity-container activity-container--${nameClass}'> 
+  const template = 
+  `<div class='activity-container activity-container--${nameClass}'> 
       <div class='activity'>
         <div class='activity__category'>
           <p>${title}</p>
@@ -44,7 +45,7 @@ function render(nameClass, title, hour, prev) { // la funcion render recibe los 
         <p class='day'>Last Week - ${prev}hr</p>
       </div>
     </div>
-</div>`;
+</div>`
 
 //la plantilla contiene el nameClass el cual sirve para que a carda tarjeta se le asigne la clase dinamicamente y pueda usar su respectivo estilo(como el color, la imagen de fondo)
 //los demas datos se rellenan el plantilla son el titulo las horas y la frecuencia de entrenamiento
