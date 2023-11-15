@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png'>
+  <link rel='stylesheet' href='./css/style.css'>
   <title>Frontend Mentor | Time tracking dashboard</title>
 
 
@@ -14,110 +14,39 @@
 
 <body>
 
-  <div class="container">
-    <div class="timeframe-container">
-      <div class="user">
-        <div class="user__avatar">
-          <img src="./src/images/image-jeremy.png" alt="avatar del usurio" class="user__avatar__image">
+  <div class='container'>
+    <div class='timeframe-container'>
+      <div class='user'>
+        <div class='user__avatar'>
+          <img src='./src/images/image-jeremy.png' alt='avatar del usurio' class='user__avatar__image'>
         </div>
-        <p class="user__name">Report for <br>
-          <span class="user__name__full--name">Jeremy Robson</span>
+        <p class='user__name'>Report for <br>
+          <span class='user__name__full--name'>Jeremy Robson</span>
         </p>
       </div>
-      <ul class="timeframe-container__period">
-        <li class="period__daily" id="daily">Daily</li>
-        <li class="period__weekly" id="weekly">Weekly</li>
-        <li class="period__daily" id="monthly">Monthly</li>
+      <ul class='timeframe-container__period'>
+        <li class='period__daily active' id='daily'>Daily</li>
+        <li class='period__weekly' id='weekly'>Weekly</li>
+        <li class='period__daily' id='monthly'>Monthly</li>
       </ul>
     </div>
 
-    <div class="activity-container activity-container--word">
-      <div class="activity">
-        <div class="activity__category">
-          <p>Word</p>
-          <p>...</p>
-        </div>
-        <div class="activity__duration">
-          <p class="hour">32hr</p>
-          <p class="day">Last Week - 36hr</p>
-        </div>
-      </div>
-    </div>
+    <div class="wrap"></div>
 
-    <div class="activity-container activity-container--play">
-      <div class="activity">
-        <div class="activity__category">
-          <p>Play</p>
-          <p>..</p>
-        </div>
-        <div class="activity__duration">
-          <p class="hour">32hr</p>
-          <p class="day">Last Week - 36hr</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="activity-container activity-container--study">
-      <div class="activity">
-        <div class="activity__category">
-          <p>Study</p>
-         <p>...</p>
-        </div>
-        <div class="activity__duration">
-          <p class="hour">32hr</p>
-          <p class="day">Last Week - 36hr</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="activity-container activity-container--exercise">
-      <div class="activity">
-        <div class="activity__category">
-          <p>Exercise</p>
-          <p>...</p>
-        </div>
-        <div class="activity__duration">
-          <p class="hour">32hr</p>
-          <p class="day">Last Week - 36hr</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="activity-container activity-container--social">
-      <div class="activity">
-        <div class="activity__category">
-          <p>Social</p>
-          <p>...</p>
-        </div>
-        <div class="activity__duration">
-          <p class="hour">32hr</p>
-          <p class="day">Last Week - 36hr</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="activity-container activity-container--self-care">
-      <div class="activity">
-        <div class="activity__category">
-          <p>Self Care</p>
-          <p>...</p>
-        </div>
-        <div class="activity__duration">
-          <p class="hour">32hr</p>
-          <p class="day">Last Week - 36hr</p>
-        </div>
-      </div>
-    </div>
+    
 
 
 
   </div>
 
+  <footer class='attribution'>
+    Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>Frontend Mentor</a>.
+    Coded by <a href='#'>César Yeguez</a>.
+  </footer>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+  <script type='module' src='./js/app.js'></script>
+
 </body>
 
 </html>

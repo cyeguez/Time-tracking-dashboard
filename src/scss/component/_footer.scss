@@ -1,21 +1,23 @@
 @use "../base/var" as v;
 .attribution {
+
   width: 90%;
-  margin: 0px auto;
+  margin:100px auto;
   letter-spacing: 0.5px;
   display: flex;
   justify-content: center;
   font-size: 11px;
   text-align: center;
-  color: v.$Dark-brown;
+  bottom: 0;
+  color: v.$Light-red-work;
   a {
-    color: v.$Softred;
+    color: v.$Light-red-study;
   }
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 725px) {
   .attribution {
-    margin-top: -18.75rem;
+    
     font-size: 1rem;
   }
 }
